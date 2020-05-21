@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Launching app</title>
+</head>
+<body>
+  <script>
+    try {
+      document.location.href = '{{.AppLaunchURI}}';
+    } catch(e) {}
+    setTimeout(function() {
+      document.location.replace('{{.CompleteURI}}');
+    }, 100);
+  </script>
+</body>
+</html>
